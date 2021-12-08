@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Directory App</title>
+    <link rel="icon" href="images/scala.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <%- include('partials/header') %>
+        </div>
+
+        <div>
+            <%- include('partials/messages') %> 
+        </div>
+
+        <br><br>
+        <div id="header">
+            <h2>These are all your books</h2>
+            <a href="/books/add-book">
+                <span class="add-icon">+</span>
+                add book
+            </a>
+        </div>
+    
+        <br><br>
+
+        <main id="books">
+        <% if(books) { %>
+
+            <% if(books.length > 0) { %>
+
+               <% books.forEach(book => { %>
+                
+                    <div class="book">
+                        <span class="book-status">
+                            <%= book.status%>
+                        </span>
+                        <h3 class="book-title">
+                            <%= book.title %>
+                        </h3>
+                        <p class="book-author">
+                            <%= book.author %>
+                        </p>
+                        <div class="form-btns">
+                            <a href="/books/<%= book._id %>" class="btn edit-book">edit</a>
+                            <form action="/books/<%= book._id%>?newMethod=DELETE" method="POST">
+                                <input type="submit" class="btn del-btn" value="delete">
+                            </form>
+                        </div>
+                    </div>
+
+               <% }) %>
+
+            <% } else {%>
+
+            <%}%>
+
+        <% } %>
+          
+  
+        </main>
+
+<br><br><br>
+    </div>
+    
+
+    
+
+</body>
+</html>

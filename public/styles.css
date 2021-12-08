@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: white;
+}
+
+nav {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 10px;
+  color: black;
+}
+
+.nav-brand {
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+#header a {
+  padding: 0 10px;
+  font-weight: 600;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+}
+
+.add-icon {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+  background-color: lightgrey;
+  margin: 50px;
+  padding-bottom: 100px;
+  border-radius: 20px;
+}
+
+main .book {
+  flex-basis: 250px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 10px;
+  position: relative;
+  background-color: #333;
+  max-width: 300px;
+}
+
+main .book .book-title {
+  margin-top: 30px;
+}
+
+main .form-btns {
+  display: flex;
+  padding: 10px 0;
+}
+
+main .form-btns .btn {
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin: 0 3px;
+}
+
+main .edit-book {
+  background-color: limegreen;
+}
+
+main .form-btns .del-btn {
+  background-color: red;
+  padding: 10px 5px;
+}
+
+main .book-status {
+  background-color: lightgrey;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+
+#add-form h2 {
+  text-align: center;
+}
+
+#add-form {
+  width: 320px;
+  padding: 20px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  border: 1px solid #333;
+}
+
+#add-form label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#add-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#add-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+#add-form .form-group {
+  margin: 10px 0;
+}
+
+#add-form > div p {
+  text-align: center;
+}
+
+#add-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+#edit-books-wrapper {
+  width: 320px;
+  padding: 30px;
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+
+#edit-books-wrapper input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Start Register styles  */
+#register-wrapper,
+#login-wrapper {
+  width: 320px;
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+#register-wrapper h1,
+#login-wrapper h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#register-wrapper input,
+#login-wrapper input {
+  width: 100%;
+  padding: 15px 10px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid lightgrey;
+  /* border-bottom: 2px solid lightgrey; */
+  margin: 5px 0;
+  border-radius: 20px;
+}
+
+#register-wrapper input:focus,
+#login-wrapper input:focus {
+  border: 2px solid thistle;
+  outline: none;
+}
+
+#register-wrapper button,
+#login-wrapper button {
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#accounts-back-link {
+  text-align: center;
+  color: black;
+  margin: 20px 0;
+}
+
+#accounts-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center;
+}
+
+#accounts-wrapper h2 {
+  text-align: center;
+  margin: 30px 10px;
+}
+
+#accounts-wrapper #accounts-btns a {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+
+#accounts-wrapper #accounts-btns a:first-child {
+  background-color: rgb(20, 20, 20);
+}
+#accounts-wrapper #accounts-btns a:last-child {
+  background-color: darkgrey;
+}
+
+.messages {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

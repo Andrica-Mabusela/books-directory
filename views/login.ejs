@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login | welcome</title>
+    <link rel="icon" href="images/scala.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="login-wrapper">
+        <h1>Sign in</h1>
+        <div class="messages">
+            <%- include('./partials/messages') %>
+        </div>
+        <form action="/users/login" method="POST">
+            <div>
+                <input type="email" name="email" placeholder="Enter Email Address">
+            </div>
+            <div>
+                <input type="password" name="password1" placeholder="Enter Password">
+            </div>
+            <div>
+                <button type="submit">Sign in</button>
+            </div>
+        </form>
+
+        <div id="accounts-back-link">
+            <p>
+                <a href="/users/accounts">
+                    < back</a>
+            </p>
+            
+        </div>
+    </div>
+
+
+</body>
+
+</html>

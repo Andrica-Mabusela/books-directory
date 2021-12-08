@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit book | welcome</title>
+    <link rel="icon" href="images/scala.png">
+    <style>
+      #edit-books-wrapper {
+          width: 300px;
+          border: 1px solid black;
+          padding: 20px;
+          position: fixed;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -30%);
+      }
+
+      #edit-books-wrapper h2 {
+          text-align: center;
+      }
+
+      #edit-books-wrapper label {
+          font-weight: 600;
+      }
+
+      #edit-books-wrapper input, select{
+          width: 100%;
+          padding: 10px 0;
+          margin: 10px 5px;
+          font-weight: 600;
+      }
+
+      #edit-books-wrapper input[type="submit"] {
+          background-color: black;
+          color: white;
+          font-size: 18px;
+          padding: 15px 10px;
+          outline: none;
+          border: none;
+          border-radius: 10px;
+      }
+    </style>
+    
+</head>
+<body>
+    
+    <div id="edit-books-wrapper">
+        <h2>Edit The Book</h2>
+        <form action="/books/<%= book._id %>?newMethod=PUT" method="POST">
+            <div class="form-group">
+                <label for="title">Edit Book Title</label>
+                <input type="text" name="title" value="<%= book.title %>">
+            </div>
+            <div class="form-group">
+                <label for="title">Edit Book Author</label>
+                <input type="text" name="author" value="<%= book.author %>">
+            </div>
+            <div class="form-group">
+                <label for="title">Edit Book Status</label>
+                <select type="text" name="status">
+                       <% 
+                       let status = book.status
+                       
+                       if(status === 'public') { %>
+                            <option value="public">public</option>
+                            <option value="private">private</option>
+                       <% } else { %>
+                            <option value="private">private</option>
+                            <option value="public">public</option>
+                      <%  } %>
+                 </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="edit book">
+            </div>
+        </form>
+
+
+    </div>
+
+
+</body>
+</html>
